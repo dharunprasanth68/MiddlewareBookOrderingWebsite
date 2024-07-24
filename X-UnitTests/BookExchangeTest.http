@@ -1,0 +1,20 @@
+@token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTY3NjhmYWZhMGNjMmNmOGVjYTgzMiIsImlhdCI6MTcwMDE4OTA5MiwiZXhwIjoxNzAyNzgxMDkyfQ.Lsu_LnOAspaMCwkBarTC784J_50XqVc8RiJPm1DWmUQ"
+@baseUrl = http://localhost:4000
+###
+
+# GET {{baseUrl}}/books HTTP/1.1
+
+GET {{baseUrl}}/books/bookListForm
+Authorization: Bearer {{token}}
+# In this example, @token is a custom variable that holds your actual token. Replace your_actual_token_here with the token you have.
+###
+POST {{baseUrl}}/create
+Content-Type: application/json
+Cookie: jwt={{token}}
+
+{
+    "title": "The Lord of the Rings",
+    "author": "J. R. R. Tolkien"
+   
+}
+
